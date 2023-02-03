@@ -1,0 +1,12 @@
+http:// {
+	@api {
+		path /api/*
+		path /swagger/*
+	}
+
+	handle @api {
+		reverse_proxy {$API_ADDRESS}
+	}
+
+	reverse_proxy {$FRONT_ADDRESS}
+}

@@ -13,7 +13,7 @@ import { 日本語 } from './i18n/ja/index'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 
 // Safely loads the .env file, making sure all the variables are defined
-config()
+config({ allowEmptyValues: true })
 
 export const nuxtAliases = {
   blocks: resolve(__dirname, './components/blocks'),
