@@ -5,7 +5,9 @@ http:// {
 	}
 
 	handle @api {
-		reverse_proxy {$API_ADDRESS}
+		reverse_proxy {$API_ADDRESS} {
+			header_up Host {upstream_hostport}
+		}
 	}
 
 	reverse_proxy {$FRONT_ADDRESS}
