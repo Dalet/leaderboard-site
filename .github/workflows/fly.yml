@@ -13,6 +13,8 @@ jobs:
     concurrency:
       group: test-env-deploy
       cancel-in-progress: true
+    permissions:
+      deployments: write
     runs-on: ubuntu-latest
     steps:
       - uses: dentarg/fly@v1
